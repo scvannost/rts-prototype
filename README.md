@@ -24,7 +24,7 @@ rts-prototype/
 ├── reqirements.dev.txt  
 ├── reqirements.txt  
 ├── setup.cfg  
-|  
+│  
 ├── app.py  
 ├── rts_lib/  
 │   ├── __init__.py  
