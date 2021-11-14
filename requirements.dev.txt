@@ -1,0 +1,5 @@
+-r requirements.txt
+flask~=2.0
+python-dotenv~=0.19.2
+setuptools>=58
+wheel~=0.37
