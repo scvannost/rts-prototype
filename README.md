@@ -17,18 +17,18 @@ db.init_app(app: Flask)
 Run `python app.py` or equivalent to generate tables via `db.create_all()`.
 
 # File Structure
-rts-prototype/
-├── LICENSE
-├── pyproject.toml
-├── README.md
-├── reqirements.dev.txt
-├── reqirements.txt
-├── setup.cfg
-|
-├── app.py
-├── rts_lib/
-│   ├── __init__.py
-│   └── models/
-│       ├── __init__.py
-│       └── core.py
-└── tests/
+rts-prototype/  
+├── LICENSE  
+├── pyproject.toml  
+├── README.md  
+├── reqirements.dev.txt  
+├── reqirements.txt  
+├── setup.cfg  
+|  
+├── app.py  
+├── rts_lib/  
+│   ├── __init__.py  
+│   └── models/  
+│       ├── __init__.py  
+│       └── core.py   
+└── tests/  
