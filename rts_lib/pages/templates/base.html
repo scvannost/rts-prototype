@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>{% block title %}{% endblock %}</title>
+
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<script src="https://momentjs.com/downloads/moment.js"></script>
+	
+	{% block head %}{% endblock %}
+</head>
+<body style="padding-bottom: 50px;">
+
+<div style="min-height: 100%;" class="container">
+	{% block body%}{% endblock %}
+</div>
+{% block footer %}{% endblock %}
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+	<div class="container" style="text-align: center;">
+		Copyright &copy; 2021 - Powered by <img src="{{ url_for('rts.static', filename='img/formulaic.png') }}" style="max-width: 150px; max-height: 50px; margin-left: -8px;" />
+	</div>
+</nav>
+
+</body>
+</html>

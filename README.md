@@ -7,9 +7,10 @@ Ensure the following environment variables are defined before import:
 - `POSTGRES_USER`
 
 ```python
-from rts_lib import db, SQLALCHEMY_DATABASE_URI
-app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
-db.init_app(app: Flask)
+import rts_lib
+rts_db = rts_lib.init_db(app)
+rts_lib.init_session(app, rts_db)
+app.register_blueprint(rts_lib.blueprint, url_prefix="/<prefix>")
 ```
 
 ## First-time set up
@@ -29,8 +30,17 @@ rts-prototype/
 ├── app.py
 ├── rts_lib/
 │   ├── __init__.py
-│   └── models/
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── core.py
+│   │   └── users.py
+│   └── pages/
 │       ├── __init__.py
-│       └── core.py
+│       ├── core.py
+│       └── templates/
+│           ├── 401.html
+│           ├── 403.html
+│           ├── login.html
+│           └── signup.html
 └── tests/
 ```

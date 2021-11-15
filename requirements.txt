@@ -1,3 +1,6 @@
+flask~=2.0
 Flask-SQLAlchemy~=2.5
+Flask-Session~=0.4
+passlib~=1.7
 psycopg2~=2.9
 sqlalchemy~=1.4
